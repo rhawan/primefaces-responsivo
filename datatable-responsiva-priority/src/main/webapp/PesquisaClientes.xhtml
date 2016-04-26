@@ -16,10 +16,41 @@
 					</p:toolbarGroup>
 				</p:toolbar>
 			
-				<p:dataTable value="#{clientesManager.clientes}" var="cliente">
+				<p:dataTable value="#{clientesManager.clientes}" var="cliente"
+						selectionMode="single" selection="#{clientesManager.clienteEdicao}"
+						rowKey="#{cliente.cpf}" style="margin-top: 20px">
 					<p:column headerText="Nome">
 						<h:outputText value="#{cliente.nome}"/>
 					</p:column>
+					<p:column headerText="CPF" priority="1">
+						<h:outputText value="#{cliente.cpf}"/>
+					</p:column>
+					<p:column headerText="Telefone" priority="2">
+						<h:outputText value="#{cliente.telefone}"/>
+					</p:column>
+					<p:column headerText="Celular" priority="2">
+						<h:outputText value="#{cliente.celular}"/>
+					</p:column>
+					<p:column headerText="Email" priority="3">
+						<h:outputText value="#{cliente.email}"/>
+					</p:column>
+					<p:column headerText="UF" priority="4">
+						<h:outputText value="#{cliente.estado}"/>
+					</p:column>
+					<p:column headerText="Data Nascimento" style="text-align: center" priority="4">
+						<h:outputText value="#{cliente.dataNascimento}">
+							<f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss"/>
+						</h:outputText>
+					</p:column>
+					<p:column headerText="Parcelamento Liberado" priority="6">
+						<h:outputText value="#{cliente.parcelamentoLiberado}"/>
+					</p:column>
+					<p:column headerText="Observações" priority="6">
+						<h:outputText value="#{cliente.observacoes}"/>
+					</p:column>
+					<f:facet name="footer">
+						<p:commandButton icon="ui-icon-pencil" value="Editar" />
+					</f:facet>
 				</p:dataTable>
 			
 			
