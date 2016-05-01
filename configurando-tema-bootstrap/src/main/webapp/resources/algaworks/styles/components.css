@@ -54,3 +54,14 @@
 	
 	color: #373737;
 }
+
+/* DATATABLE CLIENTES */
+@media (max-width: 640px){
+	.ui-datatable-reflow .ui-datatable-data td.hide-mobile {
+		display: none;
+	}
+}
+
+
+
+

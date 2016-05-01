@@ -37,15 +37,15 @@
 					<p:column headerText="UF" priority="4">
 						<h:outputText value="#{cliente.estado}"/>
 					</p:column>
-					<p:column headerText="Data Nascimento" style="text-align: center" priority="4">
+					<p:column headerText="Data Nascimento" style="text-align: center" priority="4" styleClass="hide-mobile">
 						<h:outputText value="#{cliente.dataNascimento}">
 							<f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss"/>
 						</h:outputText>
 					</p:column>
-					<p:column headerText="Parcelamento Liberado" priority="6">
+					<p:column headerText="Parcelamento Liberado" priority="6" styleClass="hide-mobile">
 						<h:outputText value="#{cliente.parcelamentoLiberado}"/>
 					</p:column>
-					<p:column headerText="Observações" priority="6">
+					<p:column headerText="Observações" priority="6" styleClass="hide-mobile">
 						<h:outputText value="#{cliente.observacoes}"/>
 					</p:column>
 					<f:facet name="footer">
